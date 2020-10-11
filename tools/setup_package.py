@@ -14,6 +14,7 @@ def replace_in_file(filename):
 
 replace_in_file("CMakeLists.txt")
 replace_in_file("test/CMakeLists.txt")
+replace_in_file("tools/MyLibraryConfig.txt")
 
 replace_in_file("test/test_mylibrary.cpp")
 replace_in_file("src/MyLibrary/MyLibrary.h")
