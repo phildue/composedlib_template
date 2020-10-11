@@ -7,7 +7,7 @@ def replace_in_file(filename):
     with open(filename, "r") as fin:
         with open(filename + ".tmp", "w") as fout:
             for line in fin:
-                fout.write(line.replace('MyLibrary', package_name).replace("MY_LIBRARY",package_name))
+                fout.write(line.replace('MyLibrary', package_name).replace("MY_LIBRARY",package_name).replace("mylibrary",package_name))
     os.remove(filename)
     os.rename(filename + ".tmp", filename)
 
