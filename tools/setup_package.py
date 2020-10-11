@@ -2,19 +2,19 @@ import os
 
 package_name = os.path.basename(os.getcwd())
 
-with open("CMakeLists.txt", "rt") as fin:
-    with open("CMakeLists.txt", "wt") as fout:
+with open("CMakeLists.txt", "r") as fin:
+    with open("CMakeLists.txt", "w") as fout:
         for line in fin:
             fout.write(line.replace('MyLibrary', package_name))
 
-with open("test_mylibrary.cpp", "rt") as fin:
-    with open("test_mylibrary.cpp", "wt") as fout:
+with open("test/test_mylibrary.cpp", "r") as fin:
+    with open("test/test_mylibrary.cpp", "w") as fout:
         for line in fin:
             fout.write(line.replace('MyLibrary', package_name))
             fout.write(line.replace('MY_LIBRARY', package_name))
 
-with open("src/MyLibrary.h", "rt") as fin:
-    with open("src/MyLibrary.h", "wt") as fout:
+with open("src/MyLibrary/MyLibrary.h", "r") as fin:
+    with open("src/MyLibrary/MyLibrary.h", "w") as fout:
         for line in fin:
             fout.write(line.replace('MyLibrary', package_name))
             fout.write(line.replace('MY_LIBRARY', package_name))

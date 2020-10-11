@@ -5,5 +5,4 @@ include(../tools/Macros.cmake)
 enable_testing()
 
 dnae_setup_tests(${PROJECT_NAME}
-		test_myalgorithm.cpp
-		test_myalgorithmb.cpp)
+		test_mylibrary.cpp)
